@@ -74,7 +74,7 @@ if(isset($_POST['submit'])){
 <link href="assets/plugins/jquery-file-upload/blueimp-gallery/blueimp-gallery.min.css" rel="stylesheet" />
 <link href="assets/plugins/jquery-file-upload/css/jquery.fileupload.css" rel="stylesheet" />
 <link href="assets/plugins/jquery-file-upload/css/jquery.fileupload-ui.css" rel="stylesheet" />
-<form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="POST" class="form-horizontal" data-parsley-validate="true" name="bannerform" id="khoahocform" enctype="multipart/form-data">
+<form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="POST" class="form-horizontal" data-parsley-validate="true" name="bannerform" id="tintucform" enctype="multipart/form-data">
 <div class="row">
 	<div class="col-md-12">
 		<div class="panel panel-primary">

@@ -118,7 +118,7 @@ if($users->isLoggedIn() && !$users->is_admin() && !$users->is_manager()){
                     </a>
                 </li>
                 <li>
-                    <a href="tours.html">
+                    <a href="gochoctap.html">
                         <i class="fa fa-book"></i> 
                         <span>GÓC HỌC TẬP</span>
                     </a>
@@ -127,6 +127,12 @@ if($users->isLoggedIn() && !$users->is_admin() && !$users->is_manager()){
                     <a href="banner.html">
                         <i class="fa fa-puzzle-piece"></i> 
                         <span>BANNER</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="doitac.html">
+                        <i class="fa fa-thumbs-up"></i> 
+                        <span>ĐỐI TÁC</span>
                     </a>
                 </li>
                 <li class="menu-control menu-control-right">

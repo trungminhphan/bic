@@ -1,3 +1,12 @@
+<?php
+function __autoload($class_name) {
+    require_once('admin/cls/class.' . strtolower($class_name) . '.php');
+}
+$session = new SessionManager();
+$users = new Users();
+require_once('admin/inc/functions.inc.php');
+require_once('admin/inc/config.inc.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -32,7 +41,7 @@
             	<nav id="k-menu" class="k-main-navig"><!-- main navig -->
                     <ul id="drop-down-left" class="k-dropdown-menu">
                         <li><a href="gioi-thieu.html" title="">Giới thiệu</a></li>
-                        <li><a href="khoa-hoc.html" title="">Khóa học</a></li>
+                        <li><a href="khoahoc.html" title="">Khóa học</a></li>
                         <li><a href="tesol.html" title="">TESOL</a></li>
                         <li><a href="tintuc.html" title="">Tin tức</a></li>
                         <li><a href="gochoctap.html" title="">Góc học tập</a></li>

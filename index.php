@@ -1,4 +1,9 @@
-<?php require_once('header.php'); ?>
+<?php
+require_once('header.php');
+$khoahoc = new KhoaHoc();$tintuc = new TinTuc();
+$khoahocmoi = $khoahoc->get_khoahocmoi();
+$tintucmoi = $tintuc->get_tintucmoi();
+?>
 <div class="row no-gutter fullwidth"><!-- row -->
     <div class="col-lg-12 clearfix"><!-- featured posts slider -->
         <div id="carousel-featured" class="carousel slide" data-interval="4000" data-ride="carousel"><!-- featured posts slider wrapper; auto-slide -->
@@ -78,102 +83,62 @@
     </div><!-- featured posts slider end -->
 </div><!-- row end -->
 <div class="row gutter k-equal-height"><!-- row -->
-    <div class="col-lg-4 col-md-4 col-sm-12">
-        <h6>Anh văn chuyên ngành Y - Dược - Nha </h6>
-        <p>
-        <img src="img/news-3.jpg" alt="Image 3" class="aligncenter" />
-        <p>
-            <a href="#" class="btn btn-success" title="button"><i class="fa fa-check"></i> &nbsp; Đăng ký ngay</a>
-        </p>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-12">
-        <h6>Chứng chỉ TESOL </h6>
-        <p>
-        <img src="img/news-5.jpg" alt="Image 5" class="aligncenter" />
-        </p>
-        <p>
-            <a href="#" class="btn btn-warning" title="button"><i class="fa fa-leaf"></i> &nbsp; Xem chi tiết</a>
-        </p>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-12">
-        <h6>Anh văn pháp lý  </h6>
-        <p>
-        <img src="img/news-5.jpg" alt="Image 5" class="aligncenter" />
-        </p>
-        <p>
-            <a href="#" class="btn btn-warning" title="button"><i class="fa fa-leaf"></i> &nbsp; Xem chi tiết</a>
-        </p>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-12">
-        <h6>IELTS </h6>
-        <p>
-        <img src="img/news-5.jpg" alt="Image 5" class="aligncenter" />
-        </p>
-        <p>
-            <a href="#" class="btn btn-warning" title="button"><i class="fa fa-leaf"></i> &nbsp; Xem chi tiết</a>
-        </p>
-    </div>
-    <div class="col-lg-4 col-md-4 col-sm-12">
-        <h6>Anh văn chuyên ngành Du lịch</h6>
-        <p>
-        <img src="img/news-5.jpg" alt="Image 5" class="aligncenter" />
-        </p>
-        <p>
-            <a href="#" class="btn btn-warning" title="button"><i class="fa fa-leaf"></i> &nbsp; Xem chi tiết</a>
-        </p>
-    </div>
-    <div class="col-lg-12 col-md-12" style="margin-top:20px;">
-        <h1 class="page-title">Tin tức HOT</h1><!-- category title -->
-    </div>
-    <div class="news-mini-wrap col-lg-4 col-md-4"><!-- news mini-wrap -->
-        <figure class="news-featured-image">    
-            <img src="img/news-1.jpg" alt="Featured image 1" class="img-responsive" />
-        </figure>
-        
-        <div class="page-title-meta">
-            <h1 class="page-title"><a href="#" title="Cody Rotschild enjoys...">Du học Y khoa tại quốc gia nào tốt? </a></h1>
-        </div>
-        
-        <div class="news-summary">
-            <p>
-            Du học Y khoa tại quốc gia nào tốt? <a href="" title="Read more" class="moretag">Chi tiết</a>
-            </p>
-        </div>
-    </div><!-- news mini-wrap end -->
-    <div class="news-mini-wrap col-lg-4 col-md-4"><!-- news mini-wrap -->
-        <figure class="news-featured-image">    
-            <img src="img/news-1.jpg" alt="Featured image 1" class="img-responsive" />
-        </figure>
-        
-        <div class="page-title-meta">
-            <h1 class="page-title"><a href="#" title="Cody Rotschild enjoys...">BIC tổ chức các hoạt động Giáng Sinh cho các bé.</a></h1>
-        </div>
-        
-        <div class="news-summary">
-            <p>
-            BIC tổ chức các hoạt động Giáng Sinh cho các bé. <a href="" title="Read more" class="moretag">Chi tiết</a>
-            </p>
-        </div>
-    </div><!-- news mini-wrap end -->
-    <div class="news-mini-wrap col-lg-4 col-md-4"><!-- news mini-wrap -->
-        <figure class="news-featured-image">    
-            <img src="img/news-1.jpg" alt="Featured image 1" class="img-responsive" />
-        </figure>
-        
-        <div class="page-title-meta">
-            <h1 class="page-title"><a href="#" title="Cody Rotschild enjoys...">Mừng ngày nhà giáo Việt Nam</a></h1>
-        </div>
-        
-        <div class="news-summary">
-            <p> Mừng ngày nhà giáo Việt Nam 
-                <a href="" title="Read more" class="moretag">Chi tiết</a>
-            </p>
-        </div>
-    </div><!-- news mini-wrap end -->
+    <?php
+    if($khoahocmoi){
+        foreach($khoahocmoi as $kh) {
+        if($kh['hinhanh'][0]['aliasname']){
+            $thumb = $target_images . 'thumb_360x150/' .$kh['hinhanh'][0]['aliasname'];
+            if(!file_exists($thumb)){
+                $file = $target_images .$kh['hinhanh'][0]['aliasname'];
+                resize_image($file , null, 360, 150, false , $thumb , false , false ,100 );
+            }
+        } else {
+            $thumb = 'img/news-1.jpg';
+        }
+        echo '<div class="col-lg-4 col-md-4 col-sm-12">
+                <h6>'.$kh['tieude'].'</h6>
+                <p><a href="chitietkhoahoc.html?id='.$kh['_id'].'"><img src="'.$thumb.'" alt="'.$kh['tieude'].'" title="'.$kh['tieude'].'" class="aligncenter" /></a></p>
+                <p><a href="chitietkhoahoc.html?id='.$kh['_id'].'" style="background:#d96140;" class="btn btn-warning" title="button"><i class="fa fa-leaf"></i> &nbsp; Xem chi tiết</a></p>
+            </div>';
+        }
+    } ?>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12" style="margin-top:20px;">
+    <h1 class="page-title">Tin tức HOT</h1><!-- category title -->
+</div>
+<div class="row gutter k-equal-height"><!-- row -->
+    <?php
+    if($tintucmoi){
+        foreach($tintucmoi as $tt) {
+        if($tt['hinhanh'][0]['aliasname']){
+            $thumb = $target_images . 'thumb_360x150/' .$tt['hinhanh'][0]['aliasname'];
+            if(!file_exists($thumb)){
+                $file = $target_images .$tt['hinhanh'][0]['aliasname'];
+                resize_image($file , null, 360, 150, false , $thumb , false , false ,100 );
+            }
+        } else {
+            $thumb = 'img/news-1.jpg';
+        }
+        echo '<div class="news-mini-wrap col-lg-4 col-md-4 col-sm-12"><!-- news mini-wrap -->
+                <figure class="news-featured-image">    
+                    <a href="chitiettintuc.html?id='.$tt['_id'].'">
+                    <img src="'.$thumb.'" alt="'.$tt['tieude'].'" class="img-responsive" />
+                    </a>
+                </figure>
+                <div class="page-title-meta">
+                    <h1 class="page-title"><a href="chitiettintuc.html?id='.$tt['_id'].'" title="'.$tt['tieude'].'">'.$tt['tieude'].'</a></h1>
+                </div>
+                <div class="news-summary">
+                    '.$tt['mota'].'
+                </div>
+            </div>';
+        }
+    } ?>
 </div><!-- row end -->
 <div class="col-lg-12 col-md-12" style="margin-top:20px;">
-        <h1 class="page-title">Đối tác BIC</h1><!-- category title -->
-    </div>
+    <h1 class="page-title">Đối tác BIC</h1><!-- category title -->
+</div>
+<div class="row gutter k-equal-height"><!-- row -->
     <div class="row gutter k-equal-height"><!-- row -->
         <div class="col-lg-3 col-md-3 col-sm-12">
             <figure class="gallery-photo-thumb">
@@ -196,11 +161,14 @@
             </figure>
         </div>
     </div>
-<div class="alert" style="background:#d96140;color:#fff;padding:20px;">
-    <p style="font-size:20px;font-weight:bold;">VIDEO GIỚI THIỆU BIC</p>
-    <p>BIC (British International Center) là trung tâm hàng đầu về đào tạo các khoá kỹ năng chuyên nghiệp quốc tế trong các lĩnh vực nghề nghiệp như chương trình TESOL, một chứng chỉ chuyên nghiệp cho những ai mong muốn được đến với nghề nghiệp giáo viên dạy tiếng Anh, mang đẳng cấp quốc tế hay ICFE (International Certificate in Financial English, một chứng chỉ do đại học Cambridge cấp dành cho những ai đang làm việc trong lĩnh vực tài chính, kế toán, kiểm toán hay ngân hàng đang muốn cải thiện vốn tiếng anh hiện có hay những bạn sinh viên chuyên ngành đang chuẩn bị cho mình vốn tiếng Anh chuyên ngành làm nền tảng tham gia các khóa học chuyên ngành quốc tế như ACCA, CFA..; chương trình anh văn thương mại (Business English) liên kết với Madison (Hoa Kỳ) để lấy chứng chỉ Mini-MBA...</p>
-    <p class="text-right">
-        <a href="#" class="btn btn-warning" title="button"><i class="fa fa-camera"></i> &nbsp; Xem Video</a>
-    </p>
+</div>
+<div class="row gutter k-equal-height"><!-- row -->
+    <div class="alert" style="background:#d96140;color:#fff;padding:20px;">
+        <p style="font-size:20px;font-weight:bold;">VIDEO GIỚI THIỆU BIC</p>
+        <p>BIC (British International Center) là trung tâm hàng đầu về đào tạo các khoá kỹ năng chuyên nghiệp quốc tế trong các lĩnh vực nghề nghiệp như chương trình TESOL, một chứng chỉ chuyên nghiệp cho những ai mong muốn được đến với nghề nghiệp giáo viên dạy tiếng Anh, mang đẳng cấp quốc tế hay ICFE (International Certificate in Financial English, một chứng chỉ do đại học Cambridge cấp dành cho những ai đang làm việc trong lĩnh vực tài chính, kế toán, kiểm toán hay ngân hàng đang muốn cải thiện vốn tiếng anh hiện có hay những bạn sinh viên chuyên ngành đang chuẩn bị cho mình vốn tiếng Anh chuyên ngành làm nền tảng tham gia các khóa học chuyên ngành quốc tế như ACCA, CFA..; chương trình anh văn thương mại (Business English) liên kết với Madison (Hoa Kỳ) để lấy chứng chỉ Mini-MBA...</p>
+        <p class="text-right">
+            <a href="#" class="btn btn-warning" title="button"><i class="fa fa-camera"></i> &nbsp; Xem Video</a>
+        </p>
+    </div>
 </div>
 <?php require_once('footer.php'); ?>

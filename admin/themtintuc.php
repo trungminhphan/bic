@@ -19,7 +19,6 @@ $list = $tintuc->get_all_list();
 
 if($id && $act == 'edit'){
     $tintuc->id = $id; $t = $tintuc->get_one();
-    $id_danhmuctintuc = $t['id_danhmuctintuc'];
     $tieude = $t['tieude'];
     $mota = $t['mota'];
     $noidung = $t['noidung'];
