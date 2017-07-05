@@ -12,11 +12,11 @@
             <div class="carousel-inner"><!-- Wrapper for slides -->
                 <div class="item active">
                     <img src="img/slide-3.jpg" alt="Image slide 3" />
-                    <div class="k-carousel-caption pos-1-3-right scheme-dark">
+                    <div class="k-carousel-caption pos-2-3-right scheme-dark">
                     	<div class="caption-content">
-                            <h3 class="caption-title">Learning makes us stronger for life</h3>
+                            <h3 class="caption-title">Giới thiệu BIC</h3>
                             <p>
-                            	We could brag about all of the great opportunities that our students have... or you could hear it from the students themselves.
+                            	"BIC (British International Center) là trung tâm hàng đầu về đào tạo các khoá kỹ năng chuyên nghiệp quốc tế trong các lĩnh vực nghề nghiệp. Góp phần nâng cao vị thế cạnh tranh của nguồn nhân lực Việt Nam ngang tầm với nguồn nhân lực ở các nước trong khu vực về thu nhập, ngoại ngữ và các kiến thức chuyên môn khác. "
                             </p>
                         </div>
                     </div>
@@ -24,11 +24,11 @@
                 
                 <div class="item">
                     <img src="img/slide-2.jpg" alt="Image slide 2" />
-                    <div class="k-carousel-caption pos-1-3-left scheme-light">
+                    <div class="k-carousel-caption pos-2-3-left scheme-light">
                     	<div class="caption-content">
-                            <h3 class="caption-title">Learning makes us stronger for life</h3>
+                            <h3 class="caption-title">Giới thiệu BIC</h3>
                             <p>
-                            	We could brag about all of the great opportunities that our students have... or you could hear it from the students themselves.
+                            	"BIC (British International Center) là trung tâm hàng đầu về đào tạo các khoá kỹ năng chuyên nghiệp quốc tế trong các lĩnh vực nghề nghiệp. Góp phần nâng cao vị thế cạnh tranh của nguồn nhân lực Việt Nam ngang tầm với nguồn nhân lực ở các nước trong khu vực về thu nhập, ngoại ngữ và các kiến thức chuyên môn khác. "
                             </p>
                         </div>
                     </div>
@@ -38,12 +38,9 @@
                     <img src="img/slide-1.jpg" alt="Image slide 1" />
                     <div class="k-carousel-caption pos-2-3-right scheme-dark">
                     	<div class="caption-content">
-                            <h3 class="caption-title">Learning makes us stronger for life</h3>
+                            <h3 class="caption-title">Giới thiệu BIC</h3>
                             <p>
-                            	We could brag about all of the great opportunities that our students have... or you could hear it from the students themselves.
-                            </p>
-                            <p>
-                            	<a href="#" class="btn btn-sm btn-danger" title="Button">READ MORE</a>
+                            	"BIC (British International Center) là trung tâm hàng đầu về đào tạo các khoá kỹ năng chuyên nghiệp quốc tế trong các lĩnh vực nghề nghiệp. Góp phần nâng cao vị thế cạnh tranh của nguồn nhân lực Việt Nam ngang tầm với nguồn nhân lực ở các nước trong khu vực về thu nhập, ngoại ngữ và các kiến thức chuyên môn khác. "
                             </p>
                         </div>
                     </div>
@@ -53,12 +50,9 @@
                     <img src="img/slide-4.jpg" alt="Image slide 4" />
                     <div class="k-carousel-caption pos-2-3-left scheme-light">
                     	<div class="caption-content">
-                            <h3 class="caption-title">Learning makes us stronger for life</h3>
+                            <h3 class="caption-title">Giới thiệu BIC</h3>
                             <p>
-                            	We could brag about all of the great opportunities that our students have... or you could hear it from the students themselves.
-                            </p>
-                            <p>
-                            	<a href="#" class="btn btn-sm btn-danger" title="Button">READ MORE</a>
+                            	"BIC (British International Center) là trung tâm hàng đầu về đào tạo các khoá kỹ năng chuyên nghiệp quốc tế trong các lĩnh vực nghề nghiệp. Góp phần nâng cao vị thế cạnh tranh của nguồn nhân lực Việt Nam ngang tầm với nguồn nhân lực ở các nước trong khu vực về thu nhập, ngoại ngữ và các kiến thức chuyên môn khác. "
                             </p>
                         </div>
                     </div>
@@ -66,21 +60,16 @@
                 
                 <div class="item">
                     <img src="img/slide-5.jpg" alt="Image slide 5" />
-                    <div class="k-carousel-caption pos-c-2-3 scheme-dark no-bg">
+                    <div class="k-carousel-caption pos-2-3-right scheme-dark">
                     	<div class="caption-content">
-                            <h3 class="caption-title title-giant">Learning makes us stronger for life</h3>
+                            <h3 class="caption-title title-giant">Giới thiệu BIC</h3>
                             <p>
-                            	We could brag about all of the great opportunities that our students have... or you could hear it from the students themselves.
-                            </p>
-                            <p>
-                            	<a href="#" class="btn btn-sm btn-danger" title="Button">READ MORE</a>
+                            	"BIC (British International Center) là trung tâm hàng đầu về đào tạo các khoá kỹ năng chuyên nghiệp quốc tế trong các lĩnh vực nghề nghiệp. Góp phần nâng cao vị thế cạnh tranh của nguồn nhân lực Việt Nam ngang tầm với nguồn nhân lực ở các nước trong khu vực về thu nhập, ngoại ngữ và các kiến thức chuyên môn khác. "
                             </p>
                         </div>
                     </div>
                 </div>
-                
             </div><!-- Wrapper for slides end -->
-        
             <!-- Controls -->
             <a class="left carousel-control" href="#carousel-featured" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
             <a class="right carousel-control" href="#carousel-featured" data-slide="next"><i class="fa fa-chevron-right"></i></a>

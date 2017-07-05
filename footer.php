@@ -29,7 +29,7 @@
                                 	</div>
                                 	<div class="m-contact-tel-fax">
                                     	<span class="m-contact-tel">Tel: <span itemprop="tel">08 - 3833 5735</span></span>
-                                    	<span class="m-contact-fax">Tel: <span itemprop="fax">08 - 3833 5735</span></span>
+                                    	<span class="m-contact-fax">Tel: <span itemprop="fax">08 - 39571416</span></span>
                                     </div>
                                 </div>
                                 <div class="social-icons">

@@ -37,12 +37,12 @@
                         <li><a href="tintuc.html" title="">Tin tức</a></li>
                         <li><a href="gochoctap.html" title="">Góc học tập</a></li>
                         <li>
-                            <a href="#" class="" title="">Tuyển dụng</a>
-                            <ul class="sub-menu">
+                            <a href="tuyendung.html" class="" title="">Tuyển dụng</a>
+                            <!--<ul class="sub-menu">
                                 <li><a href="giao-vien.html">Giáo viên</a></li>
                                 <li><a href="foreign-teacher.html">Foreign Teacher</a></li>
                                 <li><a href="tro-giang.html">Trợ giảng</a></li>
-                            </ul>
+                            </ul>-->
                         </li>
                         <li><a href="lien-he.html" title="">Liện hệ</a></li>
                     </ul>
