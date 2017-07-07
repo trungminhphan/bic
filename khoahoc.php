@@ -11,7 +11,7 @@ $khoahocmoi = $khoahoc->get_all_list();
     <?php
     if($khoahocmoi){
         foreach($khoahocmoi as $kh) {
-        if($kh['hinhanh'][0]['aliasname']){
+        if(isset($kh['hinhanh'][0]['aliasname']) && $kh['hinhanh'][0]['aliasname']){
             $thumb = $target_images . 'thumb_360x150/' .$kh['hinhanh'][0]['aliasname'];
             if(!file_exists($thumb)){
                 $file = $target_images .$kh['hinhanh'][0]['aliasname'];

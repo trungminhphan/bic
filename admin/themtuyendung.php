@@ -3,9 +3,9 @@ require_once('header.php');
 $msg = isset($_GET['msg']) ? $_GET['msg'] : '';
 $id = isset($_GET['id']) ? $_GET['id'] : '';
 $act = isset($_GET['act']) ? $_GET['act'] : '';
-$khoahoc = new KhoaHoc();
+$tuyendung = new TuyenDung();
 if($id && $act=='del'){
-    $khoahoc->id = $id; $t = $khoahoc->get_one();
+    $tuyendung->id = $id; $t = $tuyendung->get_one();
     if($t['hinhanh']){
         foreach($t['hinhanh'] as $h){
             if(file_exists($target_images_home . $h['aliasname'])){
@@ -13,12 +13,12 @@ if($id && $act=='del'){
             }
         }
     }
-    if($khoahoc->delete()) transfers_to('khoahoc.html?msg=Xóa thành công!');
+    if($tuyendung->delete()) transfers_to('tuyendung.html?msg=Xóa thành công!');
 }
-$list = $khoahoc->get_all_list();
+$list = $tuyendung->get_all_list();
 
 if($id && $act == 'edit'){
-    $khoahoc->id = $id; $t = $khoahoc->get_one();
+    $tuyendung->id = $id; $t = $tuyendung->get_one();
     $tieude = $t['tieude'];
     $mota = $t['mota'];
     $noidung = $t['noidung'];
@@ -29,7 +29,7 @@ if($id && $act == 'edit'){
 
 if(isset($_POST['submit'])){
     $id = isset($_POST['id']) ? $_POST['id'] : '';
-    $id_danhmuckhoahoc = isset($_POST['id_danhmuckhoahoc']) ? $_POST['id_danhmuckhoahoc'] : '';
+    $id_danhmuctuyendung = isset($_POST['id_danhmuctuyendung']) ? $_POST['id_danhmuctuyendung'] : '';
     $act = isset($_POST['act']) ? $_POST['act'] : '';
     $tieude = isset($_POST['tieude']) ? $_POST['tieude'] : '';
     $mota = isset($_POST['mota']) ? $_POST['mota'] : '';
@@ -47,20 +47,20 @@ if(isset($_POST['submit'])){
         }
     }
     $arr_hinhanh = sort_array_1($arr_hinhanh, 'orders', SORT_ASC);
-    $khoahoc->id_danhmuckhoahoc = $id_danhmuckhoahoc;
-    $khoahoc->tieude = $tieude;
-    $khoahoc->mota = $mota;
-    $khoahoc->noidung = $noidung;
-    $khoahoc->hinhanh = $arr_hinhanh;
-    $khoahoc->hienthi = $hienthi;
-    $khoahoc->video = $video;
-    $khoahoc->orders = $orders;
+    $tuyendung->id_danhmuctuyendung = $id_danhmuctuyendung;
+    $tuyendung->tieude = $tieude;
+    $tuyendung->mota = $mota;
+    $tuyendung->noidung = $noidung;
+    $tuyendung->hinhanh = $arr_hinhanh;
+    $tuyendung->hienthi = $hienthi;
+    $tuyendung->video = $video;
+    $tuyendung->orders = $orders;
 
     if($act == 'edit'){
-        $khoahoc->id = $id;
-        if($khoahoc->edit()) transfers_to('khoahoc.html?msg=Chỉnh sửa thành công');
+        $tuyendung->id = $id;
+        if($tuyendung->edit()) transfers_to('tuyendung.html?msg=Chỉnh sửa thành công');
     } else {
-        if($khoahoc->insert()) transfers_to('khoahoc.html?msg=Thêm thành công');
+        if($tuyendung->insert()) transfers_to('tuyendung.html?msg=Thêm thành công');
     }
 }
 ?>
@@ -82,7 +82,7 @@ if(isset($_POST['submit'])){
                     <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-default" data-click="panel-expand"><i class="fa fa-expand"></i></a>
                     <a href="javascript:;" class="btn btn-xs btn-icon btn-circle btn-warning" data-click="panel-collapse"><i class="fa fa-minus"></i></a>
                 </div>
-                <h4 class="panel-title"><i class="fa fa-gears"></i> Nhập thông tin Khóa học</h4>
+                <h4 class="panel-title"><i class="fa fa-gears"></i> Nhập thông tin Tuyển dụng</h4>
             </div>
             <div class="panel-body">
                 <div class="form-group">
@@ -147,7 +147,7 @@ if(isset($_POST['submit'])){
                 </div>
            	</div>
             <div class="panel-footer">
-                <a href="khoahoc.html" class="btn btn-white"><i class="fa fa-reply-all"></i> Trở về</a>
+                <a href="tuyendung.html" class="btn btn-white"><i class="fa fa-reply-all"></i> Trở về</a>
                 <button type="submit" name="submit" id="submit" class="btn btn-primary"><i class="fa fa-save"></i> Lưu</button>
             </div>
         </div>

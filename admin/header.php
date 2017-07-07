@@ -97,20 +97,25 @@ if($users->isLoggedIn() && !$users->is_admin() && !$users->is_manager()){
 		<div id="top-menu" class="top-menu">
             <!-- begin top-menu nav -->
             <ul class="nav">
+            <?php if($users->is_admin()) : ?>
                 <li>
                     <a href="index.html">
                         <i class="fa fa-home"></i>
                         <span>TRANG CHỦ</span>
                     </a>
                 </li>
-                <?php if($users->is_admin()) : ?>
             	<li>
 	                <a href="khoahoc.html">
 	                    <i class="fa fa-list"></i>
 	                    <span>KHÓA HỌC</span>
 	                </a>
                 </li>
-                <?php endif; ?>
+                <li>
+	                <a href="tesol.html">
+	                    <i class="fa fa-headphones"></i>
+	                    <span>TESOL</span>
+	                </a>
+                </li>
                 <li>
                     <a href="tintuc.html">
                         <i class="ion-calendar"></i>
@@ -135,9 +140,16 @@ if($users->isLoggedIn() && !$users->is_admin() && !$users->is_manager()){
                         <span>ĐỐI TÁC</span>
                     </a>
                 </li>
+                <li>
+                    <a href="tuyendung.html">
+                        <i class="fa fa-child"></i> 
+                        <span>TUYỂN DỤNG</span>
+                    </a>
+                </li>
                 <li class="menu-control menu-control-right">
                     <a href="#" data-click="next-menu"><i class="fa fa-angle-right"></i></a>
                 </li>
+            <?php endif; ?>
             </ul>
             <!-- end top-menu nav -->
 		</div>
