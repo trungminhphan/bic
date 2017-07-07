@@ -184,10 +184,27 @@ foreach($dt['banner'] as $t){
         <p style="font-size:20px;font-weight:bold;">VIDEO GIỚI THIỆU BIC</p>
         <p>BIC (British International Center) là trung tâm hàng đầu về đào tạo các khoá kỹ năng chuyên nghiệp quốc tế trong các lĩnh vực nghề nghiệp như chương trình TESOL, một chứng chỉ chuyên nghiệp cho những ai mong muốn được đến với nghề nghiệp giáo viên dạy tiếng Anh, mang đẳng cấp quốc tế hay ICFE (International Certificate in Financial English, một chứng chỉ do đại học Cambridge cấp dành cho những ai đang làm việc trong lĩnh vực tài chính, kế toán, kiểm toán hay ngân hàng đang muốn cải thiện vốn tiếng anh hiện có hay những bạn sinh viên chuyên ngành đang chuẩn bị cho mình vốn tiếng Anh chuyên ngành làm nền tảng tham gia các khóa học chuyên ngành quốc tế như ACCA, CFA..; chương trình anh văn thương mại (Business English) liên kết với Madison (Hoa Kỳ) để lấy chứng chỉ Mini-MBA...</p>
         <p class="text-right">
-            <a href="#" class="btn btn-warning" title="button"><i class="fa fa-camera"></i> &nbsp; Xem Video</a>
+            <a href="#modal-video" data-toggle="modal" class="btn btn-warning" title="button"><i class="fa fa-camera"></i> &nbsp; Xem Video</a>
         </p>
     </div>
 </div>
 
-
+<div class="modal fade" id="modal-video">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" style="color:#000">VIDEO GIỚI THIỆU BIC</h4>
+            </div>
+            <div class="modal-body">
+                <div style="text-align: center;">
+                    <iframe data-autoplay="false" width="600" height="400" frameborder="0" allowfullscreen src="https://www.youtube.com/embed/sQHlUWYjemk?loop=0&playlist=null&showinfo=1&theme=dark&autohide=0&controls=1&start="></iframe>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="btn btn-sm btn-white" data-dismiss="modal">Đóng</a>
+            </div>
+        </div>
+    </div>
+</div>
 <?php require_once('footer.php'); ?>
