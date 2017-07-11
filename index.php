@@ -22,16 +22,24 @@ $banners = new Banner(); $banner = $banners->get_one();
                 <li data-target="#carousel-featured" data-slide-to="3"></li>
                 <li data-target="#carousel-featured" data-slide-to="4"></li>-->
             </ol><!-- Indicators end -->
-
             <div class="carousel-inner"><!-- Wrapper for slides -->
             <?php
             foreach($banner['banner'] as $k => $b){
+                if($b['aliasname']){
+                    $thumb = $target_banner . 'thumb_1140x400/' .$b['aliasname'];
+                    if(!file_exists($thumb)){
+                        $file = $target_banner .$b['aliasname'];
+                        resize_image($file , null, 1140, 400, false , $thumb , false , false ,100 );
+                    }
+                } else {
+                    $thumb = 'img/slide-2.jpg';
+                }
                 echo '<div class="item '.($k == 0 ? 'active' : '').'">
-                    <img src="'.$target_banner . $b['aliasname'].'" alt="'.$b['mota'].'" />
+                    <img src="'.$thumb.'" alt="'.$b['mota'].'" />
                     <div class="k-carousel-caption pos-2-3-right scheme-dark">
                     	<div class="caption-content">
                             <p>'.$b['mota'].'</p>
-                            '.($b['link'] ? '<a href="http://'.$b['link'].'" class="btn btn-sm btn-danger" title="'.$b['mota'].'">Xem chi tiết</a>' : '').'
+                            '.($b['link'] ? '<a href="'.$b['link'].'" class="btn btn-sm btn-danger" title="'.$b['mota'].'">Xem chi tiết</a>' : '').'
                         </div>
                     </div>
                 </div>';

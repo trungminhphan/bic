@@ -21,7 +21,7 @@
                         	<li class="widget-container widget_recent_news"><!-- widgets list -->
                                 <h1 class="title-widget">Chi nhánh</h1>
                                 <div itemscope itemtype="http://data-vocabulary.org/Organization"> 
-                                	<h2 class="title-median m-contact-subject" itemprop="name">Trung Tâm Ngoại Ngữ Kỹ Năng Anh </h2>
+                                	<h2 class="title-median m-contact-subject" itemprop="name"> CÔNG TY TƯ VẤN VÀ GIÁO DỤC QUỐC TẾ ANH QUỐC</h2>
                                 	<div class="m-contact-address" itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
                                 		<span class="m-contact-street" itemprop="street-address">40 Trần Minh Quyền, Phường 11, Quận 10, TP.HCM</span>
                                 		<span class="m-contact-city-region"><span class="m-contact-city" itemprop="locality"></span></span>
@@ -62,7 +62,7 @@
         	<div class="row"><!-- row -->
             	<div class="col-lg-12">
                 	<p class="copy-text text-inverse">
-                    &copy; 2017 TRUNG TÂM NGOẠI NGỮ KỸ NĂNG ANH.
+                    &copy; 2017  CÔNG TY TƯ VẤN VÀ GIÁO DỤC QUỐC TẾ ANH QUỐC
                     </p>
                 </div>
             </div><!-- row end -->

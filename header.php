@@ -13,7 +13,7 @@ require_once('admin/inc/config.inc.php');
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Trung Tâm Ngoại Ngữ Kỹ Năng Anh </title>
+    <title> CÔNG TY TƯ VẤN VÀ GIÁO DỤC QUỐC TẾ ANH QUỐC</title>
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"><!-- font-awesome -->

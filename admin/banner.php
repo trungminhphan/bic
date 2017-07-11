@@ -49,7 +49,7 @@ if(isset($_POST['submit'])){
                     <div class="col-md-3">
 						<span class="btn btn-primary fileinput-button">
                             <i class="fa fa-file-image-o"></i>
-                            <span>Chọn hình Banner tốt nhất (1920px x 500px)...</span>
+                            <span>Chọn hình Banner tốt nhất (1140px x 400px)...</span>
                             <input type="file" name="banner_files[]" multiple class="banner_dinhkem">
                         </span>
                     </div>
