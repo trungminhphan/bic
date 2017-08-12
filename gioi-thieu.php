@@ -15,14 +15,23 @@ $banners = new Banner(); $banner = $banners->get_one();
             </ol><!-- Indicators end -->
 
             <div class="carousel-inner"><!-- Wrapper for slides -->
-            <?php
+             <?php
             foreach($banner['banner'] as $k => $b){
+                if($b['aliasname']){
+                    $thumb = $target_banner . 'thumb_1140x400/' .$b['aliasname'];
+                    if(!file_exists($thumb)){
+                        $file = $target_banner .$b['aliasname'];
+                        resize_image($file , null, 1140, 400, false , $thumb , false , false ,100 );
+                    }
+                } else {
+                    $thumb = 'img/slide-2.jpg';
+                }
                 echo '<div class="item '.($k == 0 ? 'active' : '').'">
-                    <img src="'.$target_banner . $b['aliasname'].'" alt="'.$b['mota'].'" />
+                    <img src="'.$thumb.'" alt="'.$b['mota'].'" />
                     <div class="k-carousel-caption pos-2-3-right scheme-dark">
                         <div class="caption-content">
                             <p>'.$b['mota'].'</p>
-                            '.($b['link'] ? '<a href="http://'.$b['link'].'" class="btn btn-sm btn-danger" title="'.$b['mota'].'">Xem chi tiết</a>' : '').'
+                            '.($b['link'] ? '<a href="'.$b['link'].'" class="btn btn-sm btn-danger" title="'.$b['mota'].'">Xem chi tiết</a>' : '').'
                         </div>
                     </div>
                 </div>';
@@ -56,7 +65,7 @@ foreach($dt['banner'] as $t){
     if($t['link']){
         echo '<div class="col-lg-3 col-md-3 col-sm-12">
             <figure class="gallery-photo-thumb">
-                <a href="http://'.$t['link'].'" title="'.($t['mota'] ? $t['mota'] : 'Đối tác BIC').'" data-fancybox-group="gallery-bssb" target="_blank"><img src="'.$thumb.'" alt="'.($t['mota'] ? $t['mota'] : 'Đối tác BIC').'" /></a>
+                <a href="'.$t['link'].'" title="'.($t['mota'] ? $t['mota'] : 'Đối tác BIC').'" data-fancybox-group="gallery-bssb" target="_blank"><img src="'.$thumb.'" alt="'.($t['mota'] ? $t['mota'] : 'Đối tác BIC').'" /></a>
             </figure>
           </div>';
     } else {

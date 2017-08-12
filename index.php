@@ -173,7 +173,7 @@ foreach($dt['banner'] as $t){
     if($t['link']){
         echo '<div class="col-lg-3 col-md-3 col-sm-12">
             <figure class="gallery-photo-thumb">
-                <a href="http://'.$t['link'].'" title="'.($t['mota'] ? $t['mota'] : 'Đối tác BIC').'" data-fancybox-group="gallery-bssb" target="_blank"><img src="'.$thumb.'" alt="'.($t['mota'] ? $t['mota'] : 'Đối tác BIC').'" /></a>
+                <a href="'.$t['link'].'" title="'.($t['mota'] ? $t['mota'] : 'Đối tác BIC').'" data-fancybox-group="gallery-bssb" target="_blank"><img src="'.$thumb.'" alt="'.($t['mota'] ? $t['mota'] : 'Đối tác BIC').'" /></a>
             </figure>
           </div>';
     } else {
