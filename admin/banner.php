@@ -3,7 +3,7 @@ require_once('header.php');
 $banner = new Banner();
 $msg = isset($_GET['msg']) ? $_GET['msg'] : '';
 $t = $banner->get_one();
-
+$url = isset($_GET['url']) ? $_GET['url'] : '';
 if(isset($_POST['submit'])){
     $act = isset($_POST['act']) ? $_POST['act'] : '';
     if($act == 'banner'){
@@ -20,7 +20,10 @@ if(isset($_POST['submit'])){
         }
         $arr_banner = sort_array_1($arr_banner, 'orders', SORT_ASC);
         $banner->banner = $arr_banner;
-        if($banner->edit_banner()) transfers_to('banner.html?msg=Lưu Banner thành công');
+        if($banner->edit_banner()){
+            if($url) transfers_to($url);
+            else transfers_to('banner.html?msg=Lưu Banner thành công');
+        }
     }
 }
 

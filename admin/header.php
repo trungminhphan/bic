@@ -69,9 +69,10 @@ if($users->isLoggedIn() && !$users->is_admin() && !$users->is_manager()){
 				<!-- end mobile sidebar expand / collapse button -->
 				<!-- begin header navigation right -->
 				<ul class="nav navbar-nav navbar-right">
+          <li><a href="../" target="_blank"><i class="fa fa-home"></i> Trang chủ chính</a></li>
 					<li class="dropdown navbar-user">
 						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
-							<i class="fa fa-user"></i> 
+							<i class="fa fa-user"></i>
 							<span class="hidden-xs">
 								<?php echo $user_default['hoten']; ?>
 							</span> <b class="caret"></b>
@@ -79,12 +80,12 @@ if($users->isLoggedIn() && !$users->is_admin() && !$users->is_manager()){
 						<ul class="dropdown-menu animated fadeInLeft">
 							<!--<li class="arrow"></li>
 							<li><a href="change_password.html"><span class="fa fa-key"></span> Thay đổi mật khẩu</a></li>-->
-                            <?php if($users->is_admin()) : ?>
-                            <li class="arrow"></li>
-                            <li><a href="users.html"><span class="fa fa-users"></span> Danh sách tài khoản</a></li>
-                            <?php endif; ?>
-							<li class="divider"></li>
-							<li><a href="logout.html"><span class="fa fa-sign-out"></span> Đăng xuất</a></li>
+                <?php if($users->is_admin()) : ?>
+                  <li class="arrow"></li>
+                  <li><a href="users.html"><span class="fa fa-users"></span> Danh sách tài khoản</a></li>
+                <?php endif; ?>
+							 <li class="divider"></li>
+							 <li><a href="logout.html"><span class="fa fa-sign-out"></span> Đăng xuất</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -124,25 +125,25 @@ if($users->isLoggedIn() && !$users->is_admin() && !$users->is_manager()){
                 </li>
                 <li>
                     <a href="gochoctap.html">
-                        <i class="fa fa-book"></i> 
+                        <i class="fa fa-book"></i>
                         <span>GÓC HỌC TẬP</span>
                     </a>
                 </li>
                 <li>
                     <a href="banner.html">
-                        <i class="fa fa-puzzle-piece"></i> 
+                        <i class="fa fa-puzzle-piece"></i>
                         <span>BANNER</span>
                     </a>
                 </li>
                 <li>
                     <a href="doitac.html">
-                        <i class="fa fa-thumbs-up"></i> 
+                        <i class="fa fa-thumbs-up"></i>
                         <span>ĐỐI TÁC</span>
                     </a>
                 </li>
                 <li>
                     <a href="tuyendung.html">
-                        <i class="fa fa-child"></i> 
+                        <i class="fa fa-child"></i>
                         <span>TUYỂN DỤNG</span>
                     </a>
                 </li>

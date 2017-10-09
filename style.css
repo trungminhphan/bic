@@ -49,9 +49,9 @@ h1 > i, h2 > i, h3 > i, h4 > i, h5 > i, h6 > i { margin-right: 10px; }
 .title-median { color: #636363; font-size: 15px; font-weight: 700; line-height: 20px; text-transform: uppercase; margin: 0 0 15px 0; }
 .title-titan { color: #898989; font-size: 20px; font-weight: 800; text-transform: uppercase; margin: 0 0 15px 0; }
 .title-giant { font-size: 40px; font-weight: 800; margin: 20px 0; letter-spacing: -0.05em; }
-h1 a:link, h1 a:visited, h2 a:link, h2 a:visited, h3 a:link, h3 a:visited, h4 a:link, h4 a:visited, h5 a:link, h5 a:visited, h6 a:link, h6 a:visited, 
+h1 a:link, h1 a:visited, h2 a:link, h2 a:visited, h3 a:link, h3 a:visited, h4 a:link, h4 a:visited, h5 a:link, h5 a:visited, h6 a:link, h6 a:visited,
 .title-median a:link, .title-median a:visited, .title-titan a:link, .title-titan a:visited, .page-title a:link, .page-title a:visited { color: #363636; }
-h1 a:hover, h1 a:focus, h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus, h4 a:hover, h4 a:focus, h5 a:hover, h5 a:focus, h6 a:hover, h6 a:focus, 
+h1 a:hover, h1 a:focus, h2 a:hover, h2 a:focus, h3 a:hover, h3 a:focus, h4 a:hover, h4 a:focus, h5 a:hover, h5 a:focus, h6 a:hover, h6 a:focus,
 .title-median a:hover, .title-median a:focus, .title-titan a:hover, .title-titan a:focus, .page-title a:hover, .page-title a:focus { color: #ea5644; }
 .title-median a { display: block; }
 /* == END titles, titles custom == */
@@ -211,14 +211,14 @@ span.alter-menu-icon { display: block; width: 24px; height: 24px; background: ur
 #carousel-featured { margin-bottom: 0; }
 .carousel-indicators { left: inherit; right: 20px; top: 20px; bottom: inherit; height: inherit; width: inherit; margin: 0; }
 .carousel-indicators li, .carousel-indicators .active { height: 15px; width: 15px; border-width: 2px; margin: 1px; }
-.carousel-indicators li { background-color: #222222\9; background-color: rgba( 0, 0, 0, 0.1 ); } 
+.carousel-indicators li { background-color: #222222\9; background-color: rgba( 0, 0, 0, 0.1 ); }
 .carousel-indicators .active { opacity: 0.7; }
 .carousel-control.right, .carousel-control.left { background-image: none; background-repeat: inherit; background-color: rgba( 0, 0, 0, 0.7 ); top: 50%; width: 40px; height: 40px; margin-top: -20px; line-height: 40px; }
 .carousel-inner > .item { -webkit-transition: 0.3s ease-in-out left; -moz-transition: 0.3s ease-in-out left; -o-transition: 0.3s ease-in-out left; transition: 0.3s ease-in-out left; }
 .carousel-control { color: #ea5644; }
 .carousel-control.left { left: 40px; }
 .carousel-control.right { right: 40px; }
-.carousel-control.left, 
+.carousel-control.left,
 .carousel-control.right { opacity: 0; -webkit-transition: all 100ms ease-out 0s; -moz-transition: all 100ms ease-out 0s; -o-transition: all 100ms ease-out 0s; transition: all 100ms ease-out 0s; }
 .carousel:hover .carousel-control.left  { left: 0; opacity: 1; }
 .carousel:hover .carousel-control.right { right: 0; opacity: 1; }
@@ -279,9 +279,9 @@ li.widget-container:not(:first-child) { margin-top: 60px; }
 .widget_archive ul li:before, .widget_categories ul li:before, .widget_pages ul li:before, .widget_meta ul li:before, .widget_nav_menu ul li:before { content: ""; position: absolute; width: 3px; height: 3px; left: 0; top: 7px; background-color: rgba( 0, 0, 0, 0.3 ); }
 .widget_archive ul li:not(:last-child), .widget_categories ul li:not(:last-child), .widget_pages ul li:not(:last-child), .widget_meta ul li:not(:last-child), .widget_nav_menu ul li:not(:last-child) { border-bottom: 1px solid rgba( 0, 0, 0, 0.05 ); margin-bottom: 7px; padding-bottom: 7px; }
 .widget_archive ul li a, .widget_categories ul li a, .widget_pages ul li a, .widget_meta ul li a, .widget_nav_menu ul li a { display: block; }
-.widget_archive ul li a:link, .widget_categories ul li a:link, .widget_pages ul li a:link, .widget_meta ul li a:link, .widget_nav_menu ul li a:link, 
+.widget_archive ul li a:link, .widget_categories ul li a:link, .widget_pages ul li a:link, .widget_meta ul li a:link, .widget_nav_menu ul li a:link,
 .widget_archive ul li a:visited, .widget_categories ul li a:visited, .widget_pages ul li a:visited, .widget_meta ul li a:visited, .widget_nav_menu ul li a:visited { color: #636363; }
-.widget_archive ul li a:hover, .widget_categories ul li a:hover, .widget_pages ul li a:hover, .widget_meta ul li a:hover, .widget_nav_menu ul li a:hover, 
+.widget_archive ul li a:hover, .widget_categories ul li a:hover, .widget_pages ul li a:hover, .widget_meta ul li a:hover, .widget_nav_menu ul li a:hover,
 .widget_archive ul li a:focus, .widget_categories ul li a:focus, .widget_pages ul li a:focus, .widget_meta ul li a:focus, .widget_nav_menu ul li a:focus { color: #ea5644; }
 .tagcloud { overflow: hidden; }
 .tagcloud a { background-color: rgba( 0, 0, 0, 0.05 ); display: block; float: left; font-size: 12px; line-height: 18px; margin: 0 5px 5px 0; padding: 5px 10px; position: relative; }
@@ -373,21 +373,21 @@ li.comment #respond { margin-top: 30px; }
 /* == END post comments == */
 
 /* == widget course finder + newsletter form ( both share the same styling ) == */
-#course-finder .form-control, 
+#course-finder .form-control,
 .newsletter-form .form-control { height: 40px; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; border: 2px solid #E9E9E9; border-right: none; }
-#course-finder .input-group-btn:last-child > .btn, 
+#course-finder .input-group-btn:last-child > .btn,
 .newsletter-form .input-group-btn:last-child > .btn { margin-left: 0; }
-#course-finder .btn-default, 
+#course-finder .btn-default,
 .newsletter-form .btn-default { font-size: 14px; font-weight: 700; color: #FFF; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0; border: none; padding: 9px 12px; }
-#course-finder .btn-default:before, 
+#course-finder .btn-default:before,
 .newsletter-form .btn-default:before { content: ""; position: absolute; left: -4px; top: 50%; margin-top: -4px; width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; z-index: 999; }
 #course-finder .btn-default { background-color: #68b5e6; }
 #course-finder .btn-default:before { border-right: 5px solid #68b5e6; }
 .newsletter-form .btn-default { background-color: #16a990; }
 .newsletter-form .btn-default:before { border-right: 5px solid #16a990; }
-#course-finder .btn-default:hover, #course-finder .btn-default:visited, #course-finder .btn-default:active, #course-finder .btn-default.active, 
+#course-finder .btn-default:hover, #course-finder .btn-default:visited, #course-finder .btn-default:active, #course-finder .btn-default.active,
 .newsletter-form .btn-default:hover, .newsletter-form .btn-default:visited, .newsletter-form .btn-default:active, .newsletter-form .btn-default.active { background-color: #333; }
-#course-finder .btn-default:hover:before, 
+#course-finder .btn-default:hover:before,
 .newsletter-form .btn-default:hover:before { border-right: 5px solid #333; }
 /* == END widget course finder == */
 
@@ -587,7 +587,7 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge { backgroun
 
 /* == bootstrap pagination == */
 .pagination { font-size: 13px; font-weight: 400; margin-bottom: 0; margin-top: 60px; }
-.pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus, 
+.pagination > .disabled > span, .pagination > .disabled > span:hover, .pagination > .disabled > span:focus, .pagination > .disabled > a, .pagination > .disabled > a:hover, .pagination > .disabled > a:focus,
 .pagination > li > a, .pagination > li > span { border: 1px solid #F2F2F2; }
 .pagination > li > a, .pagination > li > span { color: #363636; }
 .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus { border: 1px solid #F2F2F2; background-color: rgba( 0, 0, 0, 0.05 ); color: #ea5644; }
@@ -682,7 +682,7 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge { backgroun
 	#drop-down-left a { border-top: none; padding-top: 0 !important; }
 	#drop-down-left > li:first-child { margin-left: 0; }
 	.k-logo img { height: 91px; }
-	
+
 	.k-carousel-caption .caption-title { font-size: 18px; }
 	.k-carousel-caption p { font-size: 13px; }
 	.k-carousel-caption .caption-content { padding: 20px 30px; }
@@ -694,7 +694,7 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge { backgroun
 	#k-site-logo { display: block; float: none !important; text-align: center; }
 	.k-main-navig { margin-top: 30px; }
 	#drop-down-left a { border-top: none; padding-top: 0 !important; }
-	#drop-down-left .k-item-desc { display: none; }	
+	#drop-down-left .k-item-desc { display: none; }
 	#drop-down-left > li:first-child { margin-left: 0; }
 	.k-logo img { height: 91px; }
 	.k-carousel-caption { display: none; }
@@ -705,9 +705,44 @@ a.list-group-item.active > .badge, .nav-pills > .active > a > .badge { backgroun
 	#k-head { margin-bottom: 20px; }
 	#k-site-logo { display: block; float: none !important; text-align: center; }
 	.k-logo img { height: 91px; }
-	.k-functional-navig, .k-carousel-caption { display: none; }
-	
+	.k-functional-navig,
+	/*.k-carousel-caption { display: none; }*/
+
 	#mobile-nav-switch { display: block; }
 	#k-menu { display: none; }
+	#videoframe { width:100%; padding:0px;}
+	.pos-2-3-right { width:100%; }
+	.k-carousel-caption p { font-size: 12px; }
 }
 /* == END media queries == */
+@media (max-width: 767px) {
+	#videoframe { width:100% !important; height: auto !important; padding:0px;float: none;}
+}
+#videoframe{
+	width: 500px;height:350px;
+	float: left; padding: 0px 10px 10px 10px;
+}
+
+.navbar {
+  background:#343a40;border-radius: 0px;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  z-index: 999;
+
+}
+
+.navbar ul.navbar-nav {
+  list-style-type: none;
+}
+.navbar ul.navbar-nav li {
+  padding-top: 10px;
+  padding-right: 20px;
+}
+.bnt-edit {
+  background: #ff0000;
+  border-radius: 20px;
+  position: absolute;
+  bottom:10px; right:10px;
+  z-index: 999;
+}

@@ -3,11 +3,12 @@ require_once('header.php');
 $banner = new DoiTac();
 $msg = isset($_GET['msg']) ? $_GET['msg'] : '';
 $t = $banner->get_one();
-
+$url = isset($_GET['url']) ? $_GET['url'] : '';
 if(isset($_POST['submit'])){
     $act = isset($_POST['act']) ? $_POST['act'] : '';
     if($act == 'banner'){
         $arr_banner = array();
+        $url = isset($_POST['url']) ? $_POST['url'] : '';
         $banner_aliasname = isset($_POST['banner_aliasname']) ? $_POST['banner_aliasname'] : '';
         $banner_filename = isset($_POST['banner_filename']) ? $_POST['banner_filename'] : '';
         $banner_link = isset($_POST['banner_link']) ? $_POST['banner_link'] : '';
@@ -20,7 +21,10 @@ if(isset($_POST['submit'])){
         }
         $arr_banner = sort_array_1($arr_banner, 'orders', SORT_ASC);
         $banner->banner = $arr_banner;
-        if($banner->edit_banner()) transfers_to('doitac.html?msg=Lưu thành công');
+        if($banner->edit_banner()){
+            if($url) transfers_to($url);
+            else transfers_to('doitac.html?msg=Lưu thành công');
+        }
     }
 }
 
@@ -33,6 +37,7 @@ if(isset($_POST['submit'])){
 <h1 class="page-header">QUẢN LÝ LOGO CỦA ĐỐI TÁC</h1>
 <form action="<?php echo $_SERVER['REQUEST_URI']; ?>" method="POST" class="form-horizontal" data-parsley-validate="true" id="bannerform" enctype="multipart/form-data">
 <input type="hidden" name="act" value="banner">
+<input type="hidden" name="url" id="url" value="<?php echo isset($url) ? $url : ''; ?>">
 <div class="row">
 	<div class="col-md-12">
 		<div class="panel panel-primary">

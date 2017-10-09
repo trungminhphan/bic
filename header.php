@@ -22,13 +22,32 @@ require_once('admin/inc/config.inc.php');
     <link href="js/fancybox/jquery.fancybox.css" rel="stylesheet" type="text/css"><!-- Fancybox -->
     <link href="js/audioplayer/audioplayer.css" rel="stylesheet" type="text/css"><!-- Audioplayer -->
     <link href="style.css" rel="stylesheet" type="text/css"><!-- theme styles -->
-</head> 
+</head>
   <body role="document">
-  <!-- device test, don't remove. javascript needed! -->
+    <!-- device test, don't remove. javascript needed! -->
+    <?php if($users->isLoggedIn() && $users->is_admin()): ?>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="admin">ADMIN</a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="admin/khoahoc.html?url=<?php echo $_SERVER['REQUEST_URI']; ?>">Khóa học</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/tesol.html?url=<?php echo $_SERVER['REQUEST_URI']; ?>">TESOL</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/tintuc.html?url=<?php echo $_SERVER['REQUEST_URI']; ?>">Tin tức</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/gochoctap.html?url=<?php echo $_SERVER['REQUEST_URI']; ?>">Góc học tập</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/banner.html?url=<?php echo $_SERVER['REQUEST_URI']; ?>">Banner</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/doitac.html?url=<?php echo $_SERVER['REQUEST_URI']; ?>">Đối tác</a></li>
+                    <li class="nav-item"><a class="nav-link" href="admin/tuyendung.html?url=<?php echo $_SERVER['REQUEST_URI']; ?>">Tuyển dụng</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item" style="padding-top:0px;"><a class="nav-link" href="admin/logout.html?url=<?php echo $_SERVER['REQUEST_URI']; ?>"><i class="fa fa-sign-out"></i> Đăng xuất</a></li>
+                </ul>
+          </div>
+    </nav>
+    <?php endif; ?>
     <span class="visible-xs"></span><span class="visible-sm"></span><span class="visible-md"></span><span class="visible-lg"></span>
     <!-- device test end -->
-    <div id="k-head" class="container"><!-- container + head wrapper -->
-    	<div class="row"><!-- row -->        
+    <div id="k-head" class="container" <?php if($users->isLoggedIn() && $users->is_admin()): ?> style="margin-top:55px;" <?php endif; ?>><!-- container + head wrapper -->
+    	<div class="row"><!-- row -->
         	<div class="col-lg-12">
         		<div id="k-site-logo" class="pull-left"><!-- site logo -->
                     <h1 class="k-logo">
@@ -53,7 +72,7 @@ require_once('admin/inc/config.inc.php');
                                 <li><a href="tro-giang.html">Trợ giảng</a></li>
                             </ul>-->
                         </li>
-                        <li><a href="lien-he.html" title="">Liện hệ</a></li>
+                        <li><a href="lien-he.html" title="">Liên hệ</a></li>
                     </ul>
             	</nav><!-- main navig end -->
             </div>
